@@ -12,15 +12,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<String> datas = ["Hello", "there", "How", "Are", "You?"];
-
   @override
   Widget build(BuildContext context) {
     return Consumer<TaskProvider>(
       builder: (context, model, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Task list"),
+            title: model.buildTitle(),
+            actions: [
+              IconButton(
+                onPressed: model.toggleSearch,
+                icon: const Icon(Icons.search),
+              ),
+            ],
           ),
           body: ListView.builder(
             itemCount: model.tasks.length,
