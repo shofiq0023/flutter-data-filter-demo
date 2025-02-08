@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_data_filter_demo/models/task_model.dart';
 
 class TaskProvider extends ChangeNotifier {

@@ -24,6 +24,10 @@ class _HomePageState extends State<HomePage> {
                 onPressed: model.toggleSearch,
                 icon: const Icon(Icons.search),
               ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.sort),
+              ),
             ],
           ),
           body: ListView.builder(
